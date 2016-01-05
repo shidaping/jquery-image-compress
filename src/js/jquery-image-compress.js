@@ -21,7 +21,7 @@
         type: mime
       });
     },
-    imageMinify: function() {
+    imageCompress: function() {
       var file;
       var callback;
       var options={};

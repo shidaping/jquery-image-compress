@@ -31,7 +31,7 @@
   <h1>预览</h1>
   <img class='preview' />
   <script src='../bower_components/jquery/dist/jquery.min.js'></script>
-  <script src='../src/jquery-image-compress.js'></script>
+  <script src='../dist/js/jquery-image-compress.min.js'></script>
   <script>
   $(document).on({
     dragleave: function(e) {
@@ -75,12 +75,12 @@
     xhr.send(form_data);
   }
   document.getElementById('label').addEventListener("drop", function(event) {
-    $.imageMinify(event.dataTransfer.files[0],{quality:0.5}, function(result) {
+    $.imageCompress(event.dataTransfer.files[0],{quality:0.5}, function(result) {
       updateFile(result);
     });
   })
   var myonchange = function(event) {
-    $.imageMinify(event.target.files[0],{quality:0.5}, function(result) {
+    $.imageCompress(event.target.files[0],{quality:0.5}, function(result) {
       updateFile(result);
     });
   }
